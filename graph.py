@@ -68,5 +68,5 @@ def render_sankey(results):
         )
     )])
 
-    fig.update_layout(title_text="Government → Top 15 Agency → Top Program in Agency", font_size=10)
+    fig.update_layout(title_text="Government → Top 15 Agencies → Top Program in Agency", font_size=10)
     return fig
