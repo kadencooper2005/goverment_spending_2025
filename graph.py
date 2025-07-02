@@ -33,7 +33,7 @@ def render_sankey(results):
         node_index += 1
 
     for agency in top_agencies:
-        top_programs = sorted(agency_program_totals[agency].items(), key=lambda x: x[1], reverse=True)[:3]
+        top_programs = sorted(agency_program_totals[agency].items(), key=lambda x: x[1], reverse=True)[:1]
         for program, amount in top_programs:
             prog_key = f"{agency}::{program}"
             if prog_key not in program_indices:
@@ -68,5 +68,5 @@ def render_sankey(results):
         )
     )])
 
-    fig.update_layout(title_text="Government → Top 15 Agency → Top 5 Programs", font_size=10)
+    fig.update_layout(title_text="Government → Top 15 Agency → Top Programs", font_size=10)
     return fig
