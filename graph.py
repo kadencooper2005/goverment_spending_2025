@@ -33,7 +33,7 @@ def render_sankey(results):
         node_index += 1
 
     for agency in top_agencies:
-        top_programs = sorted(agency_program_totals[agency].items(), key=lambda x: x[1], reverse=True)[:5]
+        top_programs = sorted(agency_program_totals[agency].items(), key=lambda x: x[1], reverse=True)[:3]
         for program, amount in top_programs:
             prog_key = f"{agency}::{program}"
             if prog_key not in program_indices:
